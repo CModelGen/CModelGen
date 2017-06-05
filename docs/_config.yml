@@ -37,14 +37,14 @@ collections:
   tutorials:
     output: true
 
-name: Jekyll • Simple, blog-aware, static sites
-description: Transform your plain text into static websites and blogs
+name: CModelGen
+description: A Verilog to C/C++ Compiler (This site is folked from Jekyll and is under construction)
 url: https://cmodelgen.com
 
 twitter:
-  username: jekyllrb
+  username: cmodelgen
 
-logo: /img/logo-2x.png
+logo: /img/cicon.png
 
 gems:
   - jekyll-avatar
