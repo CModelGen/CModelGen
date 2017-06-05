@@ -1,0 +1,16 @@
+#
+# This is the system function descriptor table for the
+# builtin (SystemVerilog) functions.
+#
+
+$dimensions		vpiSysFuncInt
+$unpacked_dimensions	vpiSysFuncInt
+$left			vpiSysFuncInt
+$right			vpiSysFuncInt
+$low			vpiSysFuncInt
+$high			vpiSysFuncInt
+$increment		vpiSysFuncInt
+$size			vpiSysFuncInt
+
+$ivl_array_method$to_vec	vpiSysFuncVoid
+$ivl_array_method$from_vec	vpiSysFuncVoid
