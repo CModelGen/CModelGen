@@ -1,24 +1,24 @@
 ---
-layout: nil
+layout: null
 ---
 
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-	<title>GLFW - An OpenGL library</title>
-	<link href="http://www.glfw.org/"/>
-	<link rel="self" href="http://www.glfw.org/feed/index.xml" type="application/atom+xml" />
+	<title>CModelGen - A Verilog to C/C++ Compiler</title>
+	<link href="http://www.cmodelgen.com/"/>
+	<link rel="self" href="http://www.cmodelgen.com/feed/index.xml" type="application/atom+xml" />
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://www.glfw.org/</id>
+	<id>http://www.cmodelgen.com/</id>
 	<author>
-		<name>elmindreda</name>
-		<email>webmaster@glfw.org</email>
+		<name>Programmer Woogwei</name>
+		<email>woogwei@outlook.com</email>
 	</author>
 
 	{% for post in site.tags.news limit:10 %}
 		<entry>
-			<id>http://www.glfw.org/{{ post.id }}</id>
-			<link type="text/html" rel="alternate" href="http://www.glfw.org{{ post.url }}"/>
+			<id>http://www.cmodelgen.com/{{ post.id }}</id>
+			<link type="text/html" rel="alternate" href="http://www.cmodelgen.com{{ post.url }}"/>
 			<title>{{ post.title | xml_escape }}</title>
 			<updated>{{ post.date | date_to_xmlschema }}</updated>
 			<content type="html">{{ post.content | xml_escape }}</content>
