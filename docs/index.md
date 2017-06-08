@@ -8,59 +8,55 @@ title: A Verilog to C/C++ Compiler
 
 {% row %}
 
-{% col 2-3 %}
+{% col 3-4 %}
 
-**CModelGen** is a free and open source compiler that compiles synthesizable
-Verilog to C or C++ code.
+**CModelGen** is a free and open source compiler that compiles
+[synthesizable](synthesizable.html) Verilog to C or C++ code.
 
 Using a cycle-based simulation technique, the
 generated C or C++ code simulates the behavior of the Verilog design in a
 much higher speed compared with common-seen Verilog simulators.
 
 The most straight-forward usage of CModelGen is to build cycle-accurate
-simulators. Developing a cycle-accurate simulator manually is often tedious
-and error-prone. CModelGen allows generating a C/C++ simulation model
-automatically that has both a cycle-level accuracy and a high speed. When
-a Verilog design is modified, the simulation model can be generated again
-to immediately follow the updates.
+simulation models. Developing a cycle-accurate simulation models
+manually is often tedious and error-prone.
+CModelGen enables automatically generating C/C++ simulation models
+that are both accuracy and ultra fast.
+Especially, when a Verilog design is subject to modifications,
+its simulation model can be regenerated to immediately catch up the updates.
 
 CModelGen can also be used in other scenarios, such as accelarating hardware
 developments and enabling secure distribution of evaluating IP.
 
 CModelGen supports Windows, macOS and Linux.
 
-CModelGen consists of a frontend and a backend. It uses a library called
-[CModelSimLib](https://cmodelgen.github.io/cmodelsimlib_www)
-to facilitate Verilog simulation. The frontend of CModelGen is extended from
-the ICarus Verilog Simulator and is licensed under the [GNU Public License v3](gplv3.html).
-The backend is licensed under the [MIT License](mitlic.html).
 {% endcol %}
 
-{% col 1-3 %}
+{% col 1-4 %}
 
-{% button download.html %}
-Getting Started
-{% endbutton %}
-
-{% button download.html %}
-Documentation
-{% endbutton %}
-
-{% button download.html %}
-Download CModelGen
-{% endbutton %}
-
-{% button download.html %}
-Get Source Code
-{% endbutton %}
+<br>
 
 {% button https://github.com/glfw/glfw/releases/download/{{ glfwversion }}/glfw-{{ glfwversion }}.zip %}
-Download GLFW {{ glfwversion }}
+Current Stable Release
+<br>
+<small>Version {{ glfwversion }}</small>
 <br>
 <small>Released on {% include time.html date=releasedate %}</small>
 {% endbutton %}
 
-{% include milestone.html %}
+{% button https://github.com/glfw/glfw/releases/download/{{ glfwversion }}/glfw-{{ glfwversion }}.zip %}
+Current Preview Release
+<br>
+<small>Version {{ glfwversion }}</small>
+<br>
+<small>Released on {% include time.html date=releasedate %}</small>
+{% endbutton %}
+
+<br>
+
+{% button https://github.com/glfw/glfw/releases/download/{{ glfwversion }}/glfw-{{ glfwversion }}.zip %}
+Subscribe Feed
+{% endbutton %}
 
 {% endcol %}
 
@@ -68,19 +64,9 @@ Download GLFW {{ glfwversion }}
 
 <br/>
 
-{% row %}
+---------------------------------
 
-{% col 2-3 %}
-
-{% include features.html %}
-
-No library can be perfect for everyone.  If GLFW isn't what you're looking for,
-there are
-[alternatives](https://www.opengl.org/wiki/Related_toolkits_and_APIs).
-
-{% endcol %}
-
-{% col 1-3 %}
+## News
 
 {% for post in site.tags.news limit:3 %}
 <article>
@@ -98,8 +84,4 @@ Posted on {% include time.html date=post.date %}
 </article>
 {% endfor %}
 
-See the [news archive](news.html) for older posts.
-
-{% endcol %}
-
-{% endrow %}
+*See the [news archive](news.html) for older posts.*

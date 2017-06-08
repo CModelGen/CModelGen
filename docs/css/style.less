@@ -26,12 +26,13 @@
 @default-header-color: hsl(0, 0%, 10%);
 
 // Base color used for links and buttons
-@base-hue: 24;
+@base-hue: 200;
+@reduced-lightness: 10%;
 
 // Tables, download and view buttons background and hover colors
-@button-shade1: hsl(@base-hue, 100%, 50%);
-@button-shade2: hsl((@base-hue + 10), 100%, 60%);
-@button-shadow: hsl(0, 0%, 60%);
+@button-shade1: hsl(@base-hue, 100%, (50% - @reduced-lightness));
+@button-shade2: hsl((@base-hue + 10), 100%, (60% - @reduced-lightness));
+@button-shadow: hsl(0, 0%, (60% - @reduced-lightness));
 @button-text-shadow: darken(@button-shade1, 10%);
 
 // Progress bar colors
@@ -48,14 +49,17 @@
 @prog-bar-shadow1: hsla(0, 0%, 100%, 0.4);
 @prog-bar-shadow2: @button-shade1;
 
+// Title color
+@title-color: hsl(@base-hue, 100%, (50% - @reduced-lightness));
+
 // Navigation, links and table cells default and hover colors
-@link-color: hsl(@base-hue, 100%, 50%);
+@link-color: hsl(@base-hue, 100%, (50% - @reduced-lightness));
 
 // Page header and footer links hover and shadow colors
-@nav-footer-hover-color: hsl(@base-hue, 100%, 60%);
+@nav-footer-hover-color: hsl(@base-hue, 100%, (60% - @reduced-lightness));
 
 // Page header and footer height
-@header-footer-height: 64px;
+@header-footer-height: 128px;
 
 .button {
 	color: #fff;
@@ -183,21 +187,34 @@ header.main {
 	min-width: 800px;
 }
 
-#glfw_home {
-	line-height: @header-footer-height;
-	padding-right: 48px;
+#cmodelgen_home {
+	color: @title-color;
+	line-height: (@header-footer-height / 2);
+	padding-right: 0px;
 	float: left;
 	font-size: 2.5em;
-	background: url("arrow.png") no-repeat right;
+	//background: url("arrow.png") no-repeat right;
+}
+
+#cmodelgen_subtitle {
+	color: @title-color;
+	line-height: (@header-footer-height / 2) + 10px;
+	padding-right: 5px;
+	float: right;
+	font-size: 1.27em;
 }
 
 nav {
-	float: right;
+	float: left;
 }
 
 nav a {
-	margin-left: 2em;
-	line-height: @header-footer-height;
+	padding-right: 10px;
+	margin-right: 30px;
+	float: left;
+	text-align: left;
+	font-size: 1em;
+	line-height: (@header-footer-height / 2);
 }
 
 section {
@@ -209,7 +226,7 @@ footer {
 }
 
 section, footer {
-	padding: 3em 0;
+	padding: 1em 0;
 }
 
 footer ul, #markdown-toc {
