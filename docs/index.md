@@ -6,6 +6,8 @@ title: A Verilog to C/C++ Compiler
 {% assign glfwversion = site.tags.changelog.first.title %}
 {% assign releasedate = site.tags.changelog.first.date %}
 
+<br>
+
 {% row %}
 
 {% col 3-4 %}
@@ -34,10 +36,9 @@ CModelGen supports Windows, macOS and Linux.
 
 {% col 1-4 %}
 
-<br>
-
 {% button https://github.com/glfw/glfw/releases/download/{{ glfwversion }}/glfw-{{ glfwversion }}.zip %}
-Current Stable Release
+Latest Stable Release
+<br>
 <br>
 <small>Version {{ glfwversion }}</small>
 <br>
@@ -45,7 +46,8 @@ Current Stable Release
 {% endbutton %}
 
 {% button https://github.com/glfw/glfw/releases/download/{{ glfwversion }}/glfw-{{ glfwversion }}.zip %}
-Current Preview Release
+Latest Preview Release
+<br>
 <br>
 <small>Version {{ glfwversion }}</small>
 <br>

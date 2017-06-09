@@ -6,46 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/base-min.css">
 		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="alternate" type="application/atom+xml" href="feed/index.xml"><!-- 
-		<script type="text/javascript">
-			window.onload = function () {
-				var request = new XMLHttpRequest();
-				request.open("GET", "https://api.github.com/repos/glfw/glfw/milestones", true);
-
-				request.onload = function () {
-					if (this.status >= 200 && this.status < 400) {
-						var data = JSON.parse(this.response);
-
-						data = data.filter(function (item) {
-						return (item.title.split(".").length-1) === 1;
-						});
-
-						data.sort(function (a, b) {
-						return a.title - b.title;
-						});
-
-						var openIssues = data[0].open_issues;
-						var closedIssues = data[0].closed_issues;
-						var workProgress = closedIssues * 100 / (openIssues + closedIssues);
-
-						var milestoneVersion = document.getElementById("milestone-version");
-						milestoneVersion.innerHTML = data[0].title;
-
-						var progressBarInner = document.getElementById("progress-bar-inner");
-						progressBarInner.style.width = workProgress + "%";
-
-						var progress = document.getElementById("progress");
-						progress.innerHTML = Math.floor(workProgress) + "%";
-
-						var milestoneContainer = document.getElementById("milestone-container");
-						milestoneContainer.style.opacity = "1";
-						milestoneContainer.style.transition = ".7s ease-in";
-					}
-				};
-
-				request.send();
-			};
-		</script> -->
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
 	</head>
 	<body>
 		<header class="main">
@@ -65,7 +26,7 @@
                             <a href="documentation.html" id="nav_left">Documentation</a>
                             <a href="download.html" id="nav_left">Download</a>
                             <a href="documentation.html" id="nav_left">Source Code</a>
-                            <a href="media.html" id="nav_about">About</a>
+                            <a href="about.html" id="nav_about">About</a>
                         </nav>
                     </div>
                 </div>
@@ -80,30 +41,9 @@
 			<div class="wrapper">
 				<div class="pure-g-r">
 					<div class="pure-u">
-						<h4>This <a href="news.html">webpage</a> is proudly hosted by <a href="news.html">GitHub Pages</a>.</h4>
-                        <h4>CModelGen consists of a frontend and a backend. It uses a library named
-                            <a href="https://cmodelgen.github.io/cmodelsimlib_www">CMSLib</a>
-                            to facilitate Verilog simulation. The frontend of CModelGen is extended from
-                            the <a href="news.html">ICarus Verilog Simulator</a>
-                            and is licensed under the <a href="news.html">GNU Public License Version 3</a>.
-                            The backend is licensed under the <a href="news.html">MIT License</a>.
-                            The source code of this webpage is also licensed under the <a href="news.html">MIT License</a>.</h4>
+						<h4>Proudly hosted by <a href="news.html">GitHub Pages</a></h4>
+						<h4><a href="about.html">License information</a></h4>
 					</div>
-					<!-- <div class="pure-u-1-3">
-						<h4>News</h4>
-						<ul>
-							<li><a href="feed/index.xml">Atom Feed</a></li>
-							<li><a href="news.html">News Archive</a></li>
-							<li><a href="changelog.html">Version History</a></li>
-						</ul>
-					</div>
-					<div class="pure-u-1-3">
-						<h4>About</h4>
-						<ul>
-							<li><a href="faq.html">FAQ</a></li>
-							<li><a href="license.html">License</a></li>
-						</ul>
-					</div> -->
 				</div>
 			</div>
 		</footer>
